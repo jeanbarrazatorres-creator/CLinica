@@ -1,10 +1,11 @@
-import email
+
 
 from rest_framework import serializers
 from .models import Doctor
 
 
 class DoctorSerializer(serializers.ModelSerializer):
+    
     password = serializers.CharField(write_only = True)
     password2 = serializers.CharField(write_only = True)
 
